@@ -29,25 +29,19 @@
         <div class="post-content"><p>The React team have just released <a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html">Create React App</a>. It&#39;s a quick and simple way to get started with a single-page React application and I expect it&#39;s going to be popular as it&#39;s already got over 2000 stars on GitHub in less than a day!</p>
 <p>The focus is on zero configuration and letting you concentrate on just writing your application. As someone who enjoys the whole Babel/Webpack configuration dance to set up a new project I still think this is amazing as I quite easily get caught up in &quot;analysis paralysis&quot; when starting a new project. This allows you to just start and when it&#39;s time to branch out and add more configuration you can just run <code class="hljs ">npm run eject</code> and it will then expose the previously hidden Webpack/Babel/ESLint configuration.</p>
 <p>Due to the focus on simplicity, there are some really good things that are missing at the moment. I think the biggest one is Hot Module Replacement (HMR). It&#39;s big productivity boost to have your application instantly re-render in the browser without a page reload. It&#39;s currently working for CSS but it hasn&#39;t been enabled for React components yet. But you can enable it by updating your <code class="hljs ">index.js</code> to look like this:</p>
-<pre><code class="hljs javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
-<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">'./App'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'./index.css'</span>;
+<pre><code class="hljs javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">"react-dom"</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">"./App"</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">"./index.css"</span>;
 
-const rootEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>);
+const rootEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"root"</span>);
 
-ReactDOM.render(
-  &lt;App /&gt;,
-  rootEl
-);
+ReactDOM.render(&lt;App /&gt;, rootEl);
 
 <span class="hljs-keyword">if</span> (<span class="hljs-built_in">module</span>.hot) {
-  <span class="hljs-built_in">module</span>.hot.accept(<span class="hljs-string">'./App'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    const NextApp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./App'</span>).<span class="hljs-keyword">default</span>;
-    ReactDOM.render(
-      &lt;NextApp /&gt;,
-      rootEl
-    );
+  <span class="hljs-built_in">module</span>.hot.accept(<span class="hljs-string">"./App"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    const NextApp = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./App"</span>).<span class="hljs-keyword">default</span>;
+    ReactDOM.render(&lt;NextApp /&gt;, rootEl);
   });
 }</code></pre>
 <p>This will just use <a href="http://webpack.github.io/docs/hot-module-replacement-with-webpack.html">Webpack&#39;s HMR</a> to re-render your application anytime <code class="hljs ">App.js</code> (or a file it in it&#39;s dependency tree) is changed.</p>
