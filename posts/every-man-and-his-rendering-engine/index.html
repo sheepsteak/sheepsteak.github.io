@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chris Shepherd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/layout-larger.css" media="all and (min-width: 33.236em)">
+    <link rel="stylesheet" href="/static/css/mono-blue.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header-content content-container"><a class="header-link" href="/"><img class="avatar" src="/static/images/me.jpg"></a>
+        <h1 class="title"><a class="header-link" href="/">Chris Shepherd</a></h1>
+        <nav class="main-menu" role="navigation">
+          <ul>
+            <li><a class="header-link" href="/">Home</a></li>
+            <li><a class="header-link" href="/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main content-container" role="main">
+      <article class="post">
+        <h1 class="post-title"><a href="/posts/every-man-and-his-rendering-engine">Every Man and His Rendering Engine</a></h1>
+        <time class="post-date" datetime="2013-04-04T10:48:28.946Z">04/04/2013</time>
+        <div class="post-content"><p>Big changes in the web world yesterday as two new rendering engines were announced. Although one does seem bigger news than the other.</p>
+<p>First, Mozilla and Samsung announced a new rendering engine called <a href="http://blog.mozilla.org/blog/2013/04/03/mozilla-and-samsung-collaborate-on-next-generation-web-browser-engine/">Servo</a> built using Mozilla&#39;s new <a href="http://www.rust-lang.org/">Rust programming language</a>. It seems like it&#39;s further evidence of Samsung&#39;s push to make itself a major platform and a milestone on their way to break away from Android.</p>
+<p>Then Google announced that they would be forking WebKit and going their own way down the multi-process architecture highway. It seems like that there is too much legacy in WebKit for them and it&#39;s holding up progress. Their new engine is called <a href="http://blog.chromium.org/2013/04/blink-rendering-engine-for-chromium.html">Blink</a>.</p>
+<p>Google seems to be taking a new approach to vendor prefixes that I think will work a lot better for web developers. Instead of using prefixes such as “-webkit” or “-blink”, they&#39;ll be putting a flag in the preferences of Chrome. So the web developer can use the unprefixed CSS and when the feature hits the stable branch it will be suddenly turned on for end users.</p>
+<p>There are some thoughts from a Google engineer <a href="http://infrequently.org/2013/04/probably-wrong/">here</a> that are worth reading too.</p>
+
+        </div>
+      </article>
+    </div>
+    <footer class="main-footer">
+      <div class="main-footer-content content-container">
+        <div class="footer-icons-container"><a class="footer-icon foundicon-twitter" href="http://twitter.com/chrisjshepherd"></a><a class="footer-icon foundicon-facebook" href="http://www.facebook.com/chris.j.shepherd"></a><a class="footer-icon foundicon-rss" href="http://feeds.feedburner.com/chrisshepherd"></a></div><span class="copyright">Chris Shepherd © 2019</span>
+      </div>
+    </footer>
+  </body>
+</html>
