@@ -1,0 +1,16 @@
+doctype xml
+rss(version='2.0')
+	channel
+		title Chris Shepherd's Blog
+		link https://chrisshepherd.me
+		description I'm a developer from Middlesbrough currently based in London and I love to code.
+		language en-GB
+		if posts.length
+			pubDate= posts[0].published.toUTCString()
+			lastBuildDate= posts[0].published.toUTCString()
+		each post in posts
+			item
+				title= post.title
+				link https://chrisshepherd.me/posts/#{post.slug}
+				pubDate= post.published.toUTCString()
+				guid(isPermaLink='true') https://chrisshepherd.me/posts/#{post.slug}
