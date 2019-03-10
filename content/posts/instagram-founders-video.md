@@ -7,7 +7,7 @@ title: Instagram Founders Video
 Cool video from May 2011 given by the founders of [Instagram](http://instagram.com).
 
 <div class='embed-container'>
-<embed id='single' width='500' height='302' allowfullscreen='true' flashvars='config=http://ecorner.stanford.edu/embeded_config.xml%3Fmid%3D2735' src='http://ecorner.stanford.edu/swf/player-ec.swf' type='application/x-shockwave-flash'></embed>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/N-C0wApn1vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Great quote at around 45:30 from Kevin:
