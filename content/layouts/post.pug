@@ -1,0 +1,10 @@
+extends main
+
+block content
+  .main.content-container(role='main')
+    article.post
+      h1.post-title
+        a(href='/posts/' + slug)= title
+      time.post-date(datetime=published) #{published.toLocaleDateString("en-GB")}
+      .post-content
+        != md(content)
