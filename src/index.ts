@@ -56,4 +56,12 @@ const publicPath = path.join(__dirname, "..", "public");
     .on("error", err => console.error(err));
 
   await fs.copy(path.join(staticPath), path.join(publicPath, "static"));
+  await fs.copy(
+    path.join(contentPath, "CNAME"),
+    path.join(publicPath, "CNAME"),
+  );
+  await fs.copy(
+    path.join(contentPath, "README.md"),
+    path.join(publicPath, "README.md"),
+  );
 })();
