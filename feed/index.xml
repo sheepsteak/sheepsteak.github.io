@@ -5,8 +5,14 @@
     <link>https://chrisshepherd.me</link>
     <description>I'm a developer from Middlesbrough currently based in London and I love to code.</description>
     <language>en-GB</language>
-    <pubDate>Sat, 23 Jul 2016 14:51:43 GMT</pubDate>
-    <lastBuildDate>Sat, 23 Jul 2016 14:51:43 GMT</lastBuildDate>
+    <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
+    <lastBuildDate>Tue, 06 Aug 2019 11:27:49 GMT</lastBuildDate>
+    <item>
+      <title>Excluding the AWS SDK from a Serverless Package</title>
+      <link>https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</link>
+      <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
+      <guid isPermaLink="true">https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</guid>
+    </item>
     <item>
       <title>Adding Hot Module Reloading to Create React App</title>
       <link>https://chrisshepherd.me/posts/adding-hot-module-reloading-to-create-react-app</link>

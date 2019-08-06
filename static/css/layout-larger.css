@@ -40,6 +40,10 @@ ol {
   font-size: 20px;
   font-size: 1.25rem;
 }
+pre,
+code {
+  font: normal 1.25rem monospace;
+}
 .main-header {
   clear: both;
 }
@@ -155,6 +159,10 @@ ol {
   ol {
     font-size: 18px;
     font-size: 1.125rem;
+  }
+  pre,
+  code {
+    font: normal 1.125rem monospace;
   }
   .main-header {
     max-width: 100%;
