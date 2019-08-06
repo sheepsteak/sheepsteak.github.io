@@ -135,7 +135,9 @@ strong {
 p {
   margin-bottom: 1.618em;
 }
-pre {
+pre,
+code {
+  font: normal 1rem monospace;
   margin-bottom: 1.618em;
 }
 ul {
