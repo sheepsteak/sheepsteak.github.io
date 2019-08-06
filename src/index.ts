@@ -1,13 +1,11 @@
 import path from "path";
 import fs from "fs-extra";
-import grayMatter from "gray-matter";
 import rimraf from "rimraf";
 import makeDir from "make-dir";
 import { promisify } from "util";
 import klaw from "klaw";
 import renderPug from "./render-pug";
 import getPosts from "./get-posts";
-import { Post } from "./types";
 
 const contentPath = path.join(__dirname, "..", "content");
 const layoutsPath = path.join(contentPath, "layouts");

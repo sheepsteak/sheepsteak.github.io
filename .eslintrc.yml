@@ -5,3 +5,9 @@ extends:
 parser: "@typescript-eslint/parser"
 plugins:
   - "@typescript-eslint"
+rules:
+  "@typescript-eslint/explicit-function-return-type":
+    - error
+    - allowExpressions: true
+      allowHigherOrderFunctions: true
+      allowTypedFunctionExpressions: true

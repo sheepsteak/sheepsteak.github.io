@@ -14,7 +14,7 @@ const sortByPublishedDesc = (a: Post, b: Post): number => {
   return 0;
 };
 
-export default async (postsPath: string): Promise<ReadonlyArray<Post>> => {
+export default async (postsPath: string): Promise<readonly Post[]> => {
   const postsPathContents = await fs.readdir(postsPath);
   const postContents = await Promise.all(
     postsPathContents.map(async filename => ({

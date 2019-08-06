@@ -19,7 +19,8 @@ marked.setOptions({
 export default (
   filename: string,
   layoutPath: string,
-  locals?: Object,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  locals?: Record<string, any>,
 ): string =>
   pug.renderFile(filename, {
     ...locals,
