@@ -19,7 +19,7 @@
     "@types/jade": "^0.0.30",
     "@types/klaw": "^3.0.0",
     "@types/marked": "^0.6.3",
-    "@types/node": "^12.6.9",
+    "@types/node": "^13.11.0",
     "@types/pug": "^2.0.4",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
