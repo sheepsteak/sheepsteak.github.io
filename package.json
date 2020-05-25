@@ -55,11 +55,13 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{ts,css,md}": [
-        "prettier --write",
-        "git add"
-      ]
-    }
+    "*.{js,ts}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
