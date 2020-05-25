@@ -14,7 +14,7 @@
     "node": "12.7.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^5.0.5",
+    "@types/fs-extra": "^9.0.1",
     "@types/highlight.js": "^9.12.3",
     "@types/jade": "^0.0.30",
     "@types/klaw": "^3.0.0",
