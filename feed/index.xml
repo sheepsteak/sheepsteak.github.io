@@ -2,7 +2,7 @@
   <rss version="2.0">
     <channel>
         <title>Chris Shepherd's Blog</title>
-        <link>https://www.bergqvist.it</link>
+        <link>https://chrisshepherd.me</link>
         <description>I'm a software engineer from the UK writing about React, Node.js,
         gaming, and the web.</description>
         <language>en-GB</language>
