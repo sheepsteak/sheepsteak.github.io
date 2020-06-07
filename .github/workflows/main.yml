@@ -29,5 +29,5 @@ jobs:
         uses: ./.github/actions/deploy
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          DIRECTORY: public
+          DIRECTORY: out
           USER: Chris Shepherd <chris@chrisshepherd.me>

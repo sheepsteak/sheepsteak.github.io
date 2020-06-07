@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex-shrink: 1;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 1;
+}

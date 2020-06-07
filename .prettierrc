@@ -1,3 +1,4 @@
 {
+  "jsxBracketSameLine": true,
   "trailingComma": "all"
 }
