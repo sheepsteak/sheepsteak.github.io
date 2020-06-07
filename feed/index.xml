@@ -1,173 +1,202 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0">
-  <channel>
-    <title>Chris Shepherd's Blog</title>
-    <link>https://chrisshepherd.me</link>
-    <description>I'm a developer from Middlesbrough currently based in London and I love to code.</description>
-    <language>en-GB</language>
-    <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
-    <lastBuildDate>Tue, 06 Aug 2019 11:27:49 GMT</lastBuildDate>
-    <item>
-      <title>Excluding the AWS SDK from a Serverless Package</title>
-      <link>https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</link>
-      <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</guid>
-    </item>
-    <item>
-      <title>Adding Hot Module Reloading to Create React App</title>
-      <link>https://chrisshepherd.me/posts/adding-hot-module-reloading-to-create-react-app</link>
-      <pubDate>Sat, 23 Jul 2016 14:51:43 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/adding-hot-module-reloading-to-create-react-app</guid>
-    </item>
-    <item>
-      <title>Help the Durandal Kickstarter</title>
-      <link>https://chrisshepherd.me/posts/help-the-durandal-kickstarter</link>
-      <pubDate>Sat, 04 Jan 2014 16:02:48 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/help-the-durandal-kickstarter</guid>
-    </item>
-    <item>
-      <title>Samsung Asks If You're “Geared Up”</title>
-      <link>https://chrisshepherd.me/posts/samsung-asks-if-youre-geared-up</link>
-      <pubDate>Mon, 23 Dec 2013 18:14:25 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/samsung-asks-if-youre-geared-up</guid>
-    </item>
-    <item>
-      <title>Scott Hanselman's 2014 Tool List for Windows</title>
-      <link>https://chrisshepherd.me/posts/scott-hanselmans-2014-tool-list-for-windows</link>
-      <pubDate>Mon, 23 Dec 2013 11:15:02 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/scott-hanselmans-2014-tool-list-for-windows</guid>
-    </item>
-    <item>
-      <title>Thoughts on Hybrid Mobile App Development</title>
-      <link>https://chrisshepherd.me/posts/thoughts-on-hybrid-mobile-app-development</link>
-      <pubDate>Mon, 16 Dec 2013 18:15:34 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/thoughts-on-hybrid-mobile-app-development</guid>
-    </item>
-    <item>
-      <title>New Version of EchoesJS</title>
-      <link>https://chrisshepherd.me/posts/new-version-of-echoesjs</link>
-      <pubDate>Tue, 26 Nov 2013 20:41:15 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/new-version-of-echoesjs</guid>
-    </item>
-    <item>
-      <title>The Design of the New Bing Apps for Windows Phone</title>
-      <link>https://chrisshepherd.me/posts/the-design-of-the-new-bing-apps-for-wp8</link>
-      <pubDate>Thu, 08 Aug 2013 11:01:54 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/the-design-of-the-new-bing-apps-for-wp8</guid>
-    </item>
-    <item>
-      <title>WWDC 2013 App Released</title>
-      <link>https://chrisshepherd.me/posts/wwdc-2013-app-released</link>
-      <pubDate>Mon, 03 Jun 2013 19:39:45 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/wwdc-2013-app-released</guid>
-    </item>
-    <item>
-      <title>Massive Breakthrough in Battery Design</title>
-      <link>https://chrisshepherd.me/posts/massive-breakthrough-in-battery-design</link>
-      <pubDate>Wed, 17 Apr 2013 22:07:48 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/massive-breakthrough-in-battery-design</guid>
-    </item>
-    <item>
-      <title>Stay Classy Samsung</title>
-      <link>https://chrisshepherd.me/posts/stay-classy-samsung</link>
-      <pubDate>Wed, 17 Apr 2013 21:37:46 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/stay-classy-samsung</guid>
-    </item>
-    <item>
-      <title>Every Man and His Rendering Engine</title>
-      <link>https://chrisshepherd.me/posts/every-man-and-his-rendering-engine</link>
-      <pubDate>Thu, 04 Apr 2013 10:48:28 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/every-man-and-his-rendering-engine</guid>
-    </item>
-    <item>
-      <title>Facebook Mobile Reveal</title>
-      <link>https://chrisshepherd.me/posts/facebook-mobile-reveal</link>
-      <pubDate>Sat, 30 Mar 2013 15:08:56 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/facebook-mobile-reveal</guid>
-    </item>
-    <item>
-      <title>Facebook Rolling out Messenger Phone Calling</title>
-      <link>https://chrisshepherd.me/posts/facebook-rolling-out-messenger-phone-calling</link>
-      <pubDate>Sun, 20 Jan 2013 21:01:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/facebook-rolling-out-messenger-phone-calling</guid>
-    </item>
-    <item>
-      <title>New Microsoft Windows 8 App Building Guidance</title>
-      <link>https://chrisshepherd.me/posts/new-microsoft-windows-8-app-building-guidance</link>
-      <pubDate>Thu, 10 Jan 2013 12:10:19 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/new-microsoft-windows-8-app-building-guidance</guid>
-    </item>
-    <item>
-      <title>A Fresh Start</title>
-      <link>https://chrisshepherd.me/posts/a-fresh-start</link>
-      <pubDate>Fri, 04 Jan 2013 14:21:56 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/a-fresh-start</guid>
-    </item>
-    <item>
-      <title>New USA Today Site</title>
-      <link>https://chrisshepherd.me/posts/new-usa-today-site</link>
-      <pubDate>Tue, 18 Sep 2012 21:37:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/new-usa-today-site</guid>
-    </item>
-    <item>
-      <title>Windows Phone 8</title>
-      <link>https://chrisshepherd.me/posts/windows-phone-8</link>
-      <pubDate>Thu, 21 Jun 2012 07:58:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/windows-phone-8</guid>
-    </item>
-    <item>
-      <title>WP7 Phones May Not Be Upgradable to Apollo</title>
-      <link>https://chrisshepherd.me/posts/wp7-phones-may-not-be-upgradable-to-apollo</link>
-      <pubDate>Wed, 18 Apr 2012 20:07:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/wp7-phones-may-not-be-upgradable-to-apollo</guid>
-    </item>
-    <item>
-      <title>Instagram Founders Video</title>
-      <link>https://chrisshepherd.me/posts/instagram-founders-video</link>
-      <pubDate>Thu, 12 Apr 2012 19:49:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/instagram-founders-video</guid>
-    </item>
-    <item>
-      <title>Apple Announces iPad Event</title>
-      <link>https://chrisshepherd.me/posts/apple-announces-ipad-event</link>
-      <pubDate>Tue, 28 Feb 2012 07:06:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/apple-announces-ipad-event</guid>
-    </item>
-    <item>
-      <title>Microsoft Talks More About Windows 8 on ARM</title>
-      <link>https://chrisshepherd.me/posts/microsoft-talks-more-about-windows-8-on-arm</link>
-      <pubDate>Sun, 12 Feb 2012 10:42:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/microsoft-talks-more-about-windows-8-on-arm</guid>
-    </item>
-    <item>
-      <title>Quantity Over Quality</title>
-      <link>https://chrisshepherd.me/posts/quantity-over-quality</link>
-      <pubDate>Mon, 23 Jan 2012 09:26:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/quantity-over-quality</guid>
-    </item>
-    <item>
-      <title>Alan Zeino: Android's Broken Software Buttons</title>
-      <link>https://chrisshepherd.me/posts/alan-zeino-androids-broken-software-buttons</link>
-      <pubDate>Tue, 17 Jan 2012 10:07:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/alan-zeino-androids-broken-software-buttons</guid>
-    </item>
-    <item>
-      <title>But What About Aero?</title>
-      <link>https://chrisshepherd.me/posts/but-what-about-aero</link>
-      <pubDate>Thu, 08 Dec 2011 21:13:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/but-what-about-aero</guid>
-    </item>
-    <item>
-      <title>Gearing Up for Windows 8</title>
-      <link>https://chrisshepherd.me/posts/gearing-up-for-windows-8</link>
-      <pubDate>Sat, 20 Aug 2011 18:26:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/gearing-up-for-windows-8</guid>
-    </item>
-    <item>
-      <title>The Beginning</title>
-      <link>https://chrisshepherd.me/posts/the-beginning</link>
-      <pubDate>Wed, 08 Jun 2011 18:28:00 GMT</pubDate>
-      <guid isPermaLink="true">https://chrisshepherd.me/posts/the-beginning</guid>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" ?>
+  <rss version="2.0">
+    <channel>
+        <title>Chris Shepherd's Blog</title>
+        <link>https://www.bergqvist.it</link>
+        <description>I'm a software engineer from the UK writing about React, Node.js,
+        gaming, and the web.</description>
+        <language>en-GB</language>
+        <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
+        <lastBuildDate>Tue, 06 Aug 2019 11:27:49 GMT</lastBuildDate>
+        
+            <item>
+              <title>Excluding the AWS SDK from a Serverless Package</title>
+              <link>https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</link>
+              <pubDate>Tue, 06 Aug 2019 11:27:49 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/excluding-aws-sdk-in-a-serverless-package</guid>
+            </item>
+        
+            <item>
+              <title>Adding Hot Module Reloading to Create React App</title>
+              <link>https://chrisshepherd.me/posts/adding-hot-module-reloading-to-create-react-app</link>
+              <pubDate>Sat, 23 Jul 2016 14:51:43 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/adding-hot-module-reloading-to-create-react-app</guid>
+            </item>
+        
+            <item>
+              <title>Help the Durandal Kickstarter</title>
+              <link>https://chrisshepherd.me/posts/help-the-durandal-kickstarter</link>
+              <pubDate>Sat, 04 Jan 2014 16:02:48 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/help-the-durandal-kickstarter</guid>
+            </item>
+        
+            <item>
+              <title>Samsung Asks If You're “Geared Up”</title>
+              <link>https://chrisshepherd.me/posts/samsung-asks-if-youre-geared-up</link>
+              <pubDate>Mon, 23 Dec 2013 18:14:25 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/samsung-asks-if-youre-geared-up</guid>
+            </item>
+        
+            <item>
+              <title>Scott Hanselman's 2014 Tool List for Windows</title>
+              <link>https://chrisshepherd.me/posts/scott-hanselmans-2014-tool-list-for-windows</link>
+              <pubDate>Mon, 23 Dec 2013 11:15:02 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/scott-hanselmans-2014-tool-list-for-windows</guid>
+            </item>
+        
+            <item>
+              <title>Thoughts on Hybrid Mobile App Development</title>
+              <link>https://chrisshepherd.me/posts/thoughts-on-hybrid-mobile-app-development</link>
+              <pubDate>Mon, 16 Dec 2013 18:15:34 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/thoughts-on-hybrid-mobile-app-development</guid>
+            </item>
+        
+            <item>
+              <title>New Version of EchoesJS</title>
+              <link>https://chrisshepherd.me/posts/new-version-of-echoesjs</link>
+              <pubDate>Tue, 26 Nov 2013 20:41:15 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/new-version-of-echoesjs</guid>
+            </item>
+        
+            <item>
+              <title>The Design of the New Bing Apps for Windows Phone</title>
+              <link>https://chrisshepherd.me/posts/the-design-of-the-new-bing-apps-for-wp8</link>
+              <pubDate>Thu, 08 Aug 2013 11:01:54 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/the-design-of-the-new-bing-apps-for-wp8</guid>
+            </item>
+        
+            <item>
+              <title>WWDC 2013 App Released</title>
+              <link>https://chrisshepherd.me/posts/wwdc-2013-app-released</link>
+              <pubDate>Mon, 03 Jun 2013 19:39:45 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/wwdc-2013-app-released</guid>
+            </item>
+        
+            <item>
+              <title>Massive Breakthrough in Battery Design</title>
+              <link>https://chrisshepherd.me/posts/massive-breakthrough-in-battery-design</link>
+              <pubDate>Wed, 17 Apr 2013 22:07:48 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/massive-breakthrough-in-battery-design</guid>
+            </item>
+        
+            <item>
+              <title>Stay Classy Samsung</title>
+              <link>https://chrisshepherd.me/posts/stay-classy-samsung</link>
+              <pubDate>Wed, 17 Apr 2013 21:37:46 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/stay-classy-samsung</guid>
+            </item>
+        
+            <item>
+              <title>Every Man and His Rendering Engine</title>
+              <link>https://chrisshepherd.me/posts/every-man-and-his-rendering-engine</link>
+              <pubDate>Thu, 04 Apr 2013 10:48:28 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/every-man-and-his-rendering-engine</guid>
+            </item>
+        
+            <item>
+              <title>Facebook Mobile Reveal</title>
+              <link>https://chrisshepherd.me/posts/facebook-mobile-reveal</link>
+              <pubDate>Sat, 30 Mar 2013 15:08:56 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/facebook-mobile-reveal</guid>
+            </item>
+        
+            <item>
+              <title>Facebook Rolling out Messenger Phone Calling</title>
+              <link>https://chrisshepherd.me/posts/facebook-rolling-out-messenger-phone-calling</link>
+              <pubDate>Sun, 20 Jan 2013 21:01:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/facebook-rolling-out-messenger-phone-calling</guid>
+            </item>
+        
+            <item>
+              <title>New Microsoft Windows 8 App Building Guidance</title>
+              <link>https://chrisshepherd.me/posts/new-microsoft-windows-8-app-building-guidance</link>
+              <pubDate>Thu, 10 Jan 2013 12:10:19 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/new-microsoft-windows-8-app-building-guidance</guid>
+            </item>
+        
+            <item>
+              <title>A Fresh Start</title>
+              <link>https://chrisshepherd.me/posts/a-fresh-start</link>
+              <pubDate>Fri, 04 Jan 2013 14:21:56 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/a-fresh-start</guid>
+            </item>
+        
+            <item>
+              <title>New USA Today Site</title>
+              <link>https://chrisshepherd.me/posts/new-usa-today-site</link>
+              <pubDate>Tue, 18 Sep 2012 21:37:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/new-usa-today-site</guid>
+            </item>
+        
+            <item>
+              <title>Windows Phone 8</title>
+              <link>https://chrisshepherd.me/posts/windows-phone-8</link>
+              <pubDate>Thu, 21 Jun 2012 07:58:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/windows-phone-8</guid>
+            </item>
+        
+            <item>
+              <title>WP7 Phones May Not Be Upgradable to Apollo</title>
+              <link>https://chrisshepherd.me/posts/wp7-phones-may-not-be-upgradable-to-apollo</link>
+              <pubDate>Wed, 18 Apr 2012 20:07:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/wp7-phones-may-not-be-upgradable-to-apollo</guid>
+            </item>
+        
+            <item>
+              <title>Instagram Founders Video</title>
+              <link>https://chrisshepherd.me/posts/instagram-founders-video</link>
+              <pubDate>Thu, 12 Apr 2012 19:49:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/instagram-founders-video</guid>
+            </item>
+        
+            <item>
+              <title>Apple Announces iPad Event</title>
+              <link>https://chrisshepherd.me/posts/apple-announces-ipad-event</link>
+              <pubDate>Tue, 28 Feb 2012 07:06:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/apple-announces-ipad-event</guid>
+            </item>
+        
+            <item>
+              <title>Microsoft Talks More About Windows 8 on ARM</title>
+              <link>https://chrisshepherd.me/posts/microsoft-talks-more-about-windows-8-on-arm</link>
+              <pubDate>Sun, 12 Feb 2012 10:42:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/microsoft-talks-more-about-windows-8-on-arm</guid>
+            </item>
+        
+            <item>
+              <title>Quantity Over Quality</title>
+              <link>https://chrisshepherd.me/posts/quantity-over-quality</link>
+              <pubDate>Mon, 23 Jan 2012 09:26:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/quantity-over-quality</guid>
+            </item>
+        
+            <item>
+              <title>Alan Zeino: Android's Broken Software Buttons</title>
+              <link>https://chrisshepherd.me/posts/alan-zeino-androids-broken-software-buttons</link>
+              <pubDate>Tue, 17 Jan 2012 10:07:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/alan-zeino-androids-broken-software-buttons</guid>
+            </item>
+        
+            <item>
+              <title>But What About Aero?</title>
+              <link>https://chrisshepherd.me/posts/but-what-about-aero</link>
+              <pubDate>Thu, 08 Dec 2011 21:13:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/but-what-about-aero</guid>
+            </item>
+        
+            <item>
+              <title>Gearing Up for Windows 8</title>
+              <link>https://chrisshepherd.me/posts/gearing-up-for-windows-8</link>
+              <pubDate>Sat, 20 Aug 2011 18:26:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/gearing-up-for-windows-8</guid>
+            </item>
+        
+            <item>
+              <title>The Beginning</title>
+              <link>https://chrisshepherd.me/posts/the-beginning</link>
+              <pubDate>Wed, 08 Jun 2011 18:28:00 GMT</pubDate>
+              <guid isPermaLink="true">https://chrisshepherd.me/posts/the-beginning</guid>
+            </item>
+        
+    </channel>
+  </rss>
