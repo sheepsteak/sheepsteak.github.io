@@ -41,7 +41,7 @@
     "eslint-plugin-react-hooks": "^2",
     "gh-pages": "^2.0.1",
     "husky": "^4.2.5",
-    "lint-staged": "^9.2.1",
+    "lint-staged": "^10.2.9",
     "prettier": "^1.18.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.2"
