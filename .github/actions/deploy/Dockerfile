@@ -1,4 +1,4 @@
-FROM node:12.7.0-alpine
+FROM node:12.18.3-alpine
 
 RUN apk add git
 
