@@ -1,9 +1,9 @@
 import "highlight.js/styles/solarized-light.css";
 import { AppProps } from "next/app";
-import React from "react";
+import React, { VFC } from "react";
 import "../styles/global.css";
 
-const App = ({ Component, pageProps }: AppProps) => (
+const App: VFC<AppProps> = ({ Component, pageProps }) => (
   <Component {...pageProps} />
 );
 

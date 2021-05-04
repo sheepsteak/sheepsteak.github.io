@@ -1,15 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import styles from "./layout.module.css";
 
 interface Props {
-  children: React.ReactNode;
   subtitle?: React.ReactNode;
   title: React.ReactNode;
 }
 
-export const Layout = ({ children, subtitle, title }: Props) => (
+export const Layout: FC<Props> = ({ children, subtitle, title }) => (
   <div className={styles.root}>
     <div className={styles.header}>
       <Header subtitle={subtitle} title={title} />

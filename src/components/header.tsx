@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { VFC } from "react";
 import styles from "./header.module.css";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   title: React.ReactNode;
 }
 
-export const Header = ({ subtitle, title }: Props) => (
+export const Header: VFC<Props> = ({ subtitle, title }) => (
   <header className={styles.header}>
     <div className={styles.headerInner}>
       <Link href="/">

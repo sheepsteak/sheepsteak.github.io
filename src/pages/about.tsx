@@ -1,11 +1,10 @@
-// import { GetStaticPaths, GetStaticProps } from "next";
 import fm from "front-matter";
 import { promises } from "fs";
 import { highlightAuto } from "highlight.js";
 import marked from "marked";
-import { InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import React from "react";
+import React, { VFC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 
@@ -13,7 +12,12 @@ interface PostMetadata {
   title: string;
 }
 
-export const getStaticProps = async () => {
+type Props = {
+  content: string;
+  title: string;
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const fileContent = await promises.readFile(
     "./content/pages/about.md",
     "utf8",
@@ -34,10 +38,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Post = ({
-  content,
-  title,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Post: VFC<Props> = ({ content, title }) => (
   <Layout title={title}>
     <Head>
       <title>{`Chris Shepherd - ${title}`}</title>

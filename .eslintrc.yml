@@ -1,9 +1,12 @@
 extends:
-  - "react-app"
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:react/recommended"
+  - "plugin:react-hooks/recommended"
+  - "plugin:jsx-a11y/recommended"
   - "prettier"
-  - "prettier/react"
-  - "prettier/@typescript-eslint"
 rules:
+  "react/prop-types": "off"
   "jsx-a11y/anchor-is-valid":
     - error
     - components:
@@ -14,3 +17,6 @@ rules:
       aspects:
         - "invalidHref"
         - "preferButton"
+settings:
+  react:
+    "version": "detect"

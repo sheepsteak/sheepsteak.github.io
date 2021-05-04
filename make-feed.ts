@@ -7,10 +7,6 @@ interface Post {
   title: string;
 }
 
-interface Props {
-  posts: [string, Post][];
-}
-
 interface PostMetadata {
   published: Date;
   title: string;
@@ -19,7 +15,7 @@ interface PostMetadata {
 (async () => {
   const postListings = await promises.readdir("./content/posts");
   const postListingsWithContent = await Promise.all(
-    postListings.map(async curr => ({
+    postListings.map(async (curr) => ({
       filename: curr,
       fileContent: await promises.readFile(
         path.join("./content/posts", curr),
@@ -36,7 +32,7 @@ interface PostMetadata {
     }, [])
     .sort((a, b) => b[1].published.getTime() - a[1].published.getTime());
 
-  const preparedPosts = postsWithMetadata.map<[string, Post]>(p => [
+  const preparedPosts = postsWithMetadata.map<[string, Post]>((p) => [
     p[0],
     {
       ...p[1],
@@ -60,7 +56,7 @@ interface PostMetadata {
         ).toUTCString()}</lastBuildDate>
         ${preparedPosts
           .map(
-            post => `
+            (post) => `
             <item>
               <title>${post[1].title}</title>
               <link>https://chrisshepherd.me/posts/${post[0]}</link>

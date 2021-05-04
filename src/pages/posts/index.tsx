@@ -1,10 +1,9 @@
-// import { GetStaticPaths, GetStaticProps } from "next";
 import fm from "front-matter";
 import { promises } from "fs";
-import { InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import path from "path";
-import React from "react";
+import React, { VFC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
 import { PostTile } from "../../components/post-tile";
@@ -20,10 +19,14 @@ interface PostMetadata {
   title: string;
 }
 
-export const getStaticProps = async () => {
+type Props = {
+  posts: [string, Post][];
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const postListings = await promises.readdir("./content/posts");
   const postListingsWithContent = await Promise.all(
-    postListings.map(async curr => ({
+    postListings.map(async (curr) => ({
       filename: curr,
       fileContent: await promises.readFile(
         path.join("./content/posts", curr),
@@ -40,7 +43,7 @@ export const getStaticProps = async () => {
     }, [])
     .sort((a, b) => b[1].published.getTime() - a[1].published.getTime());
 
-  const preparedPosts = postsWithMetadata.map<[string, Post]>(p => [
+  const preparedPosts = postsWithMetadata.map<[string, Post]>((p) => [
     p[0],
     {
       ...p[1],
@@ -55,7 +58,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Post = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Post: VFC<Props> = ({ posts }) => (
   <Layout title="Posts">
     <Head>
       <title>Chris Shepherd - Home</title>
@@ -63,7 +66,7 @@ const Post = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => (
     <Content>
       <ul className={styles.postList}>
         {posts.map(([slug, metadata]) => (
-          <li className={styles.postItem}>
+          <li className={styles.postItem} key={slug}>
             <PostTile
               published={metadata.published}
               slug={slug}

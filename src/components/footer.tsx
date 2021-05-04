@@ -1,7 +1,7 @@
-import React from "react";
+import React, { VFC } from "react";
 import styles from "./footer.module.css";
 
-export const Footer = () => (
+export const Footer: VFC = () => (
   <footer className={styles.footer}>
     <div className={styles.footerInner}>
       <div>

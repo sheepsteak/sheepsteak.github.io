@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { VFC } from "react";
 import styles from "./post-tile.module.css";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   title: string;
 }
 
-const PostTile = ({ published, slug, title }: Props) => (
+const PostTile: VFC<Props> = ({ published, slug, title }) => (
   <div className={styles.postTile}>
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a className={styles.titleLink}>

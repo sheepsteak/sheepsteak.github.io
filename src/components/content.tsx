@@ -1,10 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./content.module.css";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-export const Content = ({ children }: Props) => (
+export const Content: FC = ({ children }) => (
   <div className={styles.content}>{children}</div>
 );

@@ -1,12 +1,11 @@
-// import { GetStaticPaths, GetStaticProps } from "next";
 import fm from "front-matter";
 import { promises } from "fs";
 import { highlightAuto } from "highlight.js";
 import marked from "marked";
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import path from "path";
-import React from "react";
+import React, { VFC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
 import styles from "./[slug].module.css";
@@ -31,7 +30,7 @@ export const getStaticPaths: GetStaticPaths<UrlQuery> = async () => {
 
   return {
     fallback: false,
-    paths: posts.map(p => ({
+    paths: posts.map((p) => ({
       params: {
         slug: p.replace(/\.md$/, ""),
       },
@@ -43,6 +42,7 @@ export const getStaticProps: GetStaticProps<Props, UrlQuery> = async ({
   params,
 }) => {
   const fileContent = await promises.readFile(
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     path.join("./content/posts", `${params!.slug}.md`),
     "utf8",
   );
@@ -63,11 +63,7 @@ export const getStaticProps: GetStaticProps<Props, UrlQuery> = async ({
   };
 };
 
-const Post = ({
-  content,
-  published,
-  title,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Post: VFC<Props> = ({ content, published, title }) => (
   <Layout
     subtitle={
       <p className={styles.subtitle}>

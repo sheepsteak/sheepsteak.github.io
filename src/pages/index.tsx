@@ -1,10 +1,9 @@
-// import { GetStaticPaths, GetStaticProps } from "next";
 import fm from "front-matter";
 import { promises } from "fs";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import path from "path";
-import React from "react";
+import React, { VFC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 import { PostTile } from "../components/post-tile";
@@ -27,7 +26,7 @@ interface PostMetadata {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const postListings = await promises.readdir("./content/posts");
   const postListingsWithContent = await Promise.all(
-    postListings.map(async curr => ({
+    postListings.map(async (curr) => ({
       filename: curr,
       fileContent: await promises.readFile(
         path.join("./content/posts", curr),
@@ -44,13 +43,15 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }, [])
     .sort((a, b) => b[1].published.getTime() - a[1].published.getTime());
 
-  const preparedPosts = postsWithMetadata.slice(0, 5).map<[string, Post]>(p => [
-    p[0],
-    {
-      ...p[1],
-      published: p[1].published.toISOString(),
-    },
-  ]);
+  const preparedPosts = postsWithMetadata
+    .slice(0, 5)
+    .map<[string, Post]>((p) => [
+      p[0],
+      {
+        ...p[1],
+        published: p[1].published.toISOString(),
+      },
+    ]);
 
   return {
     props: {
@@ -59,12 +60,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Post = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Post: VFC<Props> = ({ posts }) => (
   <Layout
     subtitle={
       <p className={styles.subtitle}>
-        I'm a software engineer from the UK writing about React, Node.js,
-        gaming, and the web.
+        {
+          "I'm a software engineer from the UK writing about React, Node.js, gaming, and the web."
+        }
       </p>
     }
     title="Hi! I'm Chris.">
@@ -74,7 +76,7 @@ const Post = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => (
     <Content>
       <ul className={styles.postList}>
         {posts.map(([slug, metadata]) => (
-          <li className={styles.postItem}>
+          <li className={styles.postItem} key={slug}>
             <PostTile
               published={metadata.published}
               slug={slug}
