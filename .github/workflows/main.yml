@@ -19,7 +19,6 @@ jobs:
           entrypoint: yarn
           args: lint
       - name: Build
-        if: contains(github.ref, 'refs/heads/develop')
         uses: docker://node:14.16.1-alpine
         with:
           entrypoint: yarn
