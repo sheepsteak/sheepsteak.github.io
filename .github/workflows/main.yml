@@ -9,18 +9,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install
-        uses: ./.github/actions/node
+        uses: docker://node:14.16.1-alpine
         with:
           entrypoint: yarn
           args: install
       - name: Lint
-        uses: ./.github/actions/node
+        uses: docker://node:14.16.1-alpine
         with:
           entrypoint: yarn
           args: lint
       - name: Build
         if: contains(github.ref, 'refs/heads/develop')
-        uses: ./.github/actions/node
+        uses: docker://node:14.16.1-alpine
         with:
           entrypoint: yarn
           args: build

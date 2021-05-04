@@ -12,7 +12,7 @@
     "lint": "eslint --ext js,ts,tsx ."
   },
   "engines": {
-    "node": "12.18.3"
+    "node": "14.16.1"
   },
   "dependencies": {
     "front-matter": "^4.0.2",
