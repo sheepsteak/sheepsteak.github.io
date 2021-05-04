@@ -9,7 +9,8 @@
     "build:feed": "ts-node --skip-project -O '{ \"esModuleInterop\": true }' ./make-feed.ts",
     "dev": "next dev",
     "deploy": "gh-pages -d public -b master -u \"Chris Shepherd <chris@chrisshepherd.me>\"",
-    "lint": "eslint --ext js,ts,tsx ."
+    "lint": "eslint --ext js,ts,tsx .",
+    "prepare": "husky install"
   },
   "engines": {
     "node": "14.16.1"
@@ -40,16 +41,11 @@
     "eslint-plugin-react": "^7",
     "eslint-plugin-react-hooks": "^2",
     "gh-pages": "^2.0.1",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
     "lint-staged": "^9.2.1",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,ts}": [
