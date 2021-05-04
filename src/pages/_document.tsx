@@ -27,11 +27,17 @@ class Document extends NextDocument {
             title="RSS"
             href="http://feeds.feedburner.com/chrisshepherd"
           />
-          <script
-            async
-            src="https://curly-fortnight.herokuapp.com/tracker.js"
-            data-ackee-server="https://curly-fortnight.herokuapp.com"
-            data-ackee-domain-id="45ad8b5b-2470-4452-9c7f-516404b72799"></script>
+          {process.env.NODE_ENV === "production" && (
+            <>
+              <script src="https://getinsights.io/js/insights.js"></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "insights.init('h67xr3y6eHc2F1IE'); insights.trackPages();",
+                }}
+              />
+            </>
+          )}
         </Head>
         <body>
           <Main />
