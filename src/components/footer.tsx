@@ -1,4 +1,4 @@
-import React, { VFC } from "react";
+import { VFC } from "react";
 import styles from "./footer.module.css";
 
 export const Footer: VFC = () => (

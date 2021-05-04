@@ -6,6 +6,7 @@ extends:
   - "plugin:jsx-a11y/recommended"
   - "prettier"
 rules:
+  "react/react-in-jsx-scope": "off"
   "react/prop-types": "off"
   "jsx-a11y/anchor-is-valid":
     - error

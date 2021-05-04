@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { VFC } from "react";
+import { VFC } from "react";
 import styles from "./post-tile.module.css";
 
 interface Props {

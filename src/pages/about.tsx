@@ -4,7 +4,7 @@ import { highlightAuto } from "highlight.js";
 import marked from "marked";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import React, { VFC } from "react";
+import { VFC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 
