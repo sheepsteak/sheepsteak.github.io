@@ -12,10 +12,6 @@ class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <link
             rel="shortcut icon"
             href="/images/favicon.png"
