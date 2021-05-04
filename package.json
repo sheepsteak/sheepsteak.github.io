@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "front-matter": "^4.0.2",
-    "next": "^9.5.2",
+    "next": "^9.5.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
