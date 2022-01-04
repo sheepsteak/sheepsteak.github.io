@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheepsteak/sheepsteak.github.io.git"
+  },
   "scripts": {
     "build": "next build && next export && yarn build:feed",
     "build:feed": "ts-node --skip-project -O '{ \"esModuleInterop\": true }' ./make-feed.ts",
