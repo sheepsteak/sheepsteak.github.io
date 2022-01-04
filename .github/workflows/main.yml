@@ -9,17 +9,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install
-        uses: docker://node:14.16.1-alpine
+        uses: docker://node:16.13.1-alpine
         with:
           entrypoint: yarn
           args: install
       - name: Lint
-        uses: docker://node:14.16.1-alpine
+        uses: docker://node:16.13.1-alpine
         with:
           entrypoint: yarn
           args: lint
       - name: Build
-        uses: docker://node:14.16.1-alpine
+        uses: docker://node:16.13.1-alpine
         with:
           entrypoint: yarn
           args: build
