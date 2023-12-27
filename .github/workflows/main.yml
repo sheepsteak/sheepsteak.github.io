@@ -1,32 +1,72 @@
 name: CI
 
-on: [push]
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    concurrency:
+      cancel-in-progress: true
+      group: ci-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version-file: .nvmrc
       - name: Install
-        uses: docker://node:16.13.1-alpine
-        with:
-          entrypoint: yarn
-          args: install
+        run: yarn install --frozen-lockfile
       - name: Lint
-        uses: docker://node:16.13.1-alpine
-        with:
-          entrypoint: yarn
-          args: lint
+        run: yarn lint
       - name: Build
-        uses: docker://node:16.13.1-alpine
+        run: yarn build
+
+  build:
+    if: contains(github.ref, 'refs/heads/develop')
+    needs: test
+    concurrency:
+      cancel-in-progress: false
+      group: pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          entrypoint: yarn
-          args: build
-      - name: Deploy
-        if: contains(github.ref, 'refs/heads/develop')
-        uses: ./.github/actions/deploy
-        env:
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          DIRECTORY: out
-          USER: Chris Shepherd <chris@chrisshepherd.me>
+          cache: yarn
+          node-version-file: .nvmrc
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: next
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./out
+
+  deploy:
+    if: contains(github.ref, 'refs/heads/develop')
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      cancel-in-progress: false
+      group: pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
