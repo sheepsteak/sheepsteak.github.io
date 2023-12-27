@@ -3,7 +3,7 @@ import type { ParsedUrlQuery } from "node:querystring";
 import path from "path";
 import fm from "front-matter";
 import { highlightAuto } from "highlight.js";
-import marked from "marked";
+import { marked } from "marked";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import type { VFC } from "react";

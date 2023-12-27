@@ -1,7 +1,7 @@
 import { promises } from "fs";
 import fm from "front-matter";
 import { highlightAuto } from "highlight.js";
-import marked from "marked";
+import { marked } from "marked";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import type { VFC } from "react";
