@@ -12,7 +12,6 @@
     "build": "next build && next export && yarn build:feed",
     "build:feed": "ts-node --skip-project -O '{ \"esModuleInterop\": true }' ./make-feed.ts",
     "dev": "next dev",
-    "deploy": "gh-pages -d public -b master -u \"Chris Shepherd <chris@chrisshepherd.me>\"",
     "lint": "eslint .",
     "prepare": "npx yarn-deduplicate && husky install"
   },
@@ -33,7 +32,6 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "front-matter": "4.0.2",
-    "gh-pages": "^3.1.0",
     "highlight.js": "^10.7.2",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
