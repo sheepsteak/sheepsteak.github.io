@@ -1,18 +1,19 @@
-import fm from "front-matter";
 import { promises } from "fs";
+import type { ParsedUrlQuery } from "node:querystring";
+import path from "path";
+import fm from "front-matter";
 import { highlightAuto } from "highlight.js";
 import marked from "marked";
-import { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import path from "path";
-import { VFC } from "react";
+import type { VFC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
 import styles from "./[slug].module.css";
 
-type UrlQuery = {
+interface UrlQuery extends ParsedUrlQuery {
   slug: string;
-};
+}
 
 interface Props {
   content: string;

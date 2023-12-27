@@ -1,10 +1,10 @@
-import fm from "front-matter";
 import { promises } from "fs";
+import fm from "front-matter";
 import { highlightAuto } from "highlight.js";
 import marked from "marked";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
-import { VFC } from "react";
+import type { VFC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 
@@ -12,10 +12,10 @@ interface PostMetadata {
   title: string;
 }
 
-type Props = {
+interface Props {
   content: string;
   title: string;
-};
+}
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const fileContent = await promises.readFile(

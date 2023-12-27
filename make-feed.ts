@@ -1,6 +1,6 @@
-import fm from "front-matter";
 import { promises } from "fs";
 import * as path from "path";
+import fm from "front-matter";
 
 interface Post {
   published: string;

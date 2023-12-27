@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import styles from "./content.module.css";
 
 export const Content: FC = ({ children }) => (

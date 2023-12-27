@@ -1,11 +1,20 @@
 extends:
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
+  - "plugin:@typescript-eslint/stylistic"
   - "plugin:react/recommended"
   - "plugin:react-hooks/recommended"
   - "plugin:jsx-a11y/recommended"
   - "prettier"
+plugins:
+  - "import"
 rules:
+  "@typescript-eslint/consistent-type-imports": "error"
+  "import/order":
+    - "error"
+    - alphabetize:
+        order: "asc"
+      warnOnUnassignedImports: true
   "react/react-in-jsx-scope": "off"
   "react/prop-types": "off"
   "jsx-a11y/anchor-is-valid":
