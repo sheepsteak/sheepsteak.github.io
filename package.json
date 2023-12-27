@@ -13,7 +13,7 @@
     "build:feed": "ts-node --skip-project -O '{ \"esModuleInterop\": true }' ./make-feed.ts",
     "dev": "next dev",
     "deploy": "gh-pages -d public -b master -u \"Chris Shepherd <chris@chrisshepherd.me>\"",
-    "lint": "eslint --ext js,ts,tsx .",
+    "lint": "eslint .",
     "prepare": "npx yarn-deduplicate && husky install"
   },
   "engines": {
