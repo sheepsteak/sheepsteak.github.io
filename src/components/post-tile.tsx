@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { VFC } from "react";
+import type { FC } from "react";
 import styles from "./post-tile.module.css";
 
 interface Props {
@@ -8,12 +8,13 @@ interface Props {
   title: string;
 }
 
-const PostTile: VFC<Props> = ({ published, slug, title }) => (
+const PostTile: FC<Props> = ({ published, slug, title }) => (
   <div className={styles.postTile}>
-    <Link as={`/posts/${slug}`} href="/posts/[slug]">
-      <a className={styles.titleLink}>
-        <h2 className={styles.title}>{title}</h2>
-      </a>
+    <Link
+      as={`/posts/${slug}`}
+      href="/posts/[slug]"
+      className={styles.titleLink}>
+      <h2 className={styles.title}>{title}</h2>
     </Link>
     <time className={styles.date} dateTime={published}>
       {new Date(published).toLocaleDateString("en-gb", {

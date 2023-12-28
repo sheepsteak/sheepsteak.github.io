@@ -1,12 +1,12 @@
-import type { FC } from "react";
+import type { FC, PropsWithChildren } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import styles from "./layout.module.css";
 
-interface Props {
+type Props = PropsWithChildren<{
   subtitle?: React.ReactNode;
   title: React.ReactNode;
-}
+}>;
 
 export const Layout: FC<Props> = ({ children, subtitle, title }) => (
   <div className={styles.root}>

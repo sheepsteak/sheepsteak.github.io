@@ -6,7 +6,7 @@ import { highlightAuto } from "highlight.js";
 import { marked } from "marked";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import type { VFC } from "react";
+import type { FC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
 import styles from "./[slug].module.css";
@@ -64,7 +64,7 @@ export const getStaticProps: GetStaticProps<Props, UrlQuery> = async ({
   };
 };
 
-const Post: VFC<Props> = ({ content, published, title }) => (
+const Post: FC<Props> = ({ content, published, title }) => (
   <Layout
     subtitle={
       <p className={styles.subtitle}>

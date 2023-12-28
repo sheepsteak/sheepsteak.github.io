@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { VFC } from "react";
+import type { FC } from "react";
 import styles from "./header.module.css";
 
 interface Props {
@@ -7,28 +7,22 @@ interface Props {
   title: React.ReactNode;
 }
 
-export const Header: VFC<Props> = ({ subtitle, title }) => (
+export const Header: FC<Props> = ({ subtitle, title }) => (
   <header className={styles.header}>
     <div className={styles.headerInner}>
-      <Link href="/">
-        <a className={styles.headerName}>CHRIS SHEPHERD</a>
+      <Link href="/" className={styles.headerName}>
+        CHRIS SHEPHERD
       </Link>
       <nav className={styles.navigation} role="navigation">
         <ul>
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/posts">
-              <a>Posts</a>
-            </Link>
+            <Link href="/posts">Posts</Link>
           </li>
           <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </nav>

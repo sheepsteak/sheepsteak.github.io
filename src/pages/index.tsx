@@ -3,7 +3,7 @@ import path from "path";
 import fm from "front-matter";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
-import type { VFC } from "react";
+import type { FC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 import { PostTile } from "../components/post-tile";
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Post: VFC<Props> = ({ posts }) => (
+const Post: FC<Props> = ({ posts }) => (
   <Layout
     subtitle={
       <p className={styles.subtitle}>

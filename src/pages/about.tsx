@@ -4,7 +4,7 @@ import { highlightAuto } from "highlight.js";
 import { marked } from "marked";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
-import type { VFC } from "react";
+import type { FC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
 
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Post: VFC<Props> = ({ content, title }) => (
+const Post: FC<Props> = ({ content, title }) => (
   <Layout title={title}>
     <Head>
       <title>{`Chris Shepherd - ${title}`}</title>
