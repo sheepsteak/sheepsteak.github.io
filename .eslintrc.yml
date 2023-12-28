@@ -30,3 +30,8 @@ rules:
 settings:
   react:
     "version": "detect"
+overrides:
+  - files:
+      - next.config.js
+    env:
+      node: true
