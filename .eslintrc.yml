@@ -33,6 +33,6 @@ settings:
     "version": "detect"
 overrides:
   - files:
-      - next.config.js
+      - "*.config.js"
     env:
       node: true

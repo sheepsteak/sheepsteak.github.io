@@ -6,5 +6,9 @@
     "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.module.css": "tailwindcss"
+  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
