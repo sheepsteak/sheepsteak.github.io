@@ -1,13 +1,12 @@
 import { promises } from "fs";
 import path from "path";
-import fm from "front-matter";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import type { FC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
 import { PostTile } from "../../components/post-tile";
-import styles from "./index.module.css";
+import { markdownToHTML } from "../../markdown";
 
 interface Post {
   published: string;
@@ -35,13 +34,37 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     })),
   );
 
-  const postsWithMetadata = postListingsWithContent
-    .reduce<[string, PostMetadata][]>((prev, { fileContent, filename }) => {
-      const { attributes } = fm<PostMetadata>(fileContent);
+  const postsWithMetadata: [string, PostMetadata][] = [];
 
-      return [...prev, [filename.replace(/\.md$/, ""), attributes]];
-    }, [])
-    .sort((a, b) => b[1].published.getTime() - a[1].published.getTime());
+  for (const { fileContent, filename } of postListingsWithContent) {
+    const htmlResult = await markdownToHTML(fileContent);
+
+    if (!htmlResult.ok) {
+      throw new Error(`Failed to convert ${filename} to HTML`, {
+        cause: htmlResult.error,
+      });
+    }
+
+    if (typeof htmlResult.data.published !== "string") {
+      throw new Error(`Missing published date in ${filename}`);
+    }
+
+    if (typeof htmlResult.data.title !== "string") {
+      throw new Error(`Missing title in ${filename}`);
+    }
+
+    postsWithMetadata.push([
+      filename.replace(/\.md$/, ""),
+      {
+        published: new Date(htmlResult.data.published),
+        title: htmlResult.data.title,
+      },
+    ]);
+  }
+
+  postsWithMetadata.sort(
+    (a, b) => b[1].published.getTime() - a[1].published.getTime(),
+  );
 
   const preparedPosts = postsWithMetadata.map<[string, Post]>((p) => [
     p[0],
@@ -64,9 +87,9 @@ const Post: FC<Props> = ({ posts }) => (
       <title>Chris Shepherd - Home</title>
     </Head>
     <Content>
-      <ul className={styles.postList}>
+      <ul className="space-y-8">
         {posts.map(([slug, metadata]) => (
-          <li className={styles.postItem} key={slug}>
+          <li key={slug}>
             <PostTile
               published={metadata.published}
               slug={slug}

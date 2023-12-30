@@ -1,8 +1,9 @@
 import type { FC, PropsWithChildren } from "react";
-import styles from "./content.module.css";
 
 type Props = PropsWithChildren;
 
 export const Content: FC<Props> = ({ children }) => (
-  <div className={styles.content}>{children}</div>
+  <div className="mx-auto max-w-lg px-3 py-6 md:max-w-3xl md:px-6 md:py-12">
+    {children}
+  </div>
 );

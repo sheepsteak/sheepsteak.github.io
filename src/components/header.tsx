@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { FC } from "react";
-import styles from "./header.module.css";
+import { Content } from "./content";
 
 interface Props {
   subtitle?: React.ReactNode;
@@ -8,26 +8,34 @@ interface Props {
 }
 
 export const Header: FC<Props> = ({ subtitle, title }) => (
-  <header className={styles.header}>
-    <div className={styles.headerInner}>
-      <Link href="/" className={styles.headerName}>
+  <header className="bg-yellow-300">
+    <Content>
+      <Link href="/" className="text-4xl font-black">
         CHRIS SHEPHERD
       </Link>
-      <nav className={styles.navigation} role="navigation">
-        <ul>
+      <nav className="mt-4" role="navigation">
+        <ul className="flex gap-4">
           <li>
-            <Link href="/">Home</Link>
+            <Link className="text-xl font-bold hover:underline" href="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/posts">Posts</Link>
+            <Link className="text-xl font-bold hover:underline" href="/posts">
+              Posts
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link className="text-xl font-bold hover:underline" href="/about">
+              About
+            </Link>
           </li>
         </ul>
       </nav>
-      <h1 className={styles.title}>{title}</h1>
+      <h1 className="my-3 text-balance text-5xl font-bold md:text-6xl xl:text-7xl">
+        {title}
+      </h1>
       {subtitle}
-    </div>
+    </Content>
   </header>
 );

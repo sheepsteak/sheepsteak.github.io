@@ -1,15 +1,13 @@
 import { promises } from "fs";
 import type { ParsedUrlQuery } from "node:querystring";
 import path from "path";
-import fm from "front-matter";
-import { highlightAuto } from "highlight.js";
-import { marked } from "marked";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import type { FC } from "react";
 import { Content } from "../../components/content";
 import { Layout } from "../../components/layout";
-import styles from "./[slug].module.css";
+import { Prose } from "../../components/prose";
+import { markdownToHTML } from "../../markdown";
 
 interface UrlQuery extends ParsedUrlQuery {
   slug: string;
@@ -18,11 +16,6 @@ interface UrlQuery extends ParsedUrlQuery {
 interface Props {
   content: string;
   published: string;
-  title: string;
-}
-
-interface PostMetadata {
-  published: Date;
   title: string;
 }
 
@@ -48,18 +41,27 @@ export const getStaticProps: GetStaticProps<Props, UrlQuery> = async ({
     "utf8",
   );
 
-  const { attributes, body } = fm<PostMetadata>(fileContent);
-  const content = marked(body, {
-    gfm: true,
-    highlight: (code, lang) => highlightAuto(code, [lang]).value,
-    langPrefix: "hljs ",
-  });
+  const htmlResult = await markdownToHTML(fileContent);
+
+  if (!htmlResult.ok) {
+    throw new Error(`Failed to convert ${params!.slug}.md to HTML`, {
+      cause: htmlResult.error,
+    });
+  }
+
+  if (typeof htmlResult.data.published !== "string") {
+    throw new Error(`Missing published date in ${params!.slug}.md`);
+  }
+
+  if (typeof htmlResult.data.title !== "string") {
+    throw new Error(`Missing title in ${params!.slug}.md`);
+  }
 
   return {
     props: {
-      content,
-      published: attributes.published.toISOString(),
-      title: attributes.title,
+      content: htmlResult.html,
+      published: new Date(htmlResult.data.published).toISOString(),
+      title: htmlResult.data.title,
     },
   };
 };
@@ -67,7 +69,7 @@ export const getStaticProps: GetStaticProps<Props, UrlQuery> = async ({
 const Post: FC<Props> = ({ content, published, title }) => (
   <Layout
     subtitle={
-      <p className={styles.subtitle}>
+      <p className="font-bold uppercase max-md:text-sm">
         <time dateTime={published}>
           {new Date(published).toLocaleDateString("en-gb", {
             day: "numeric",
@@ -83,7 +85,7 @@ const Post: FC<Props> = ({ content, published, title }) => (
     </Head>
 
     <Content>
-      <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+      <Prose>{content}</Prose>
     </Content>
   </Layout>
 );

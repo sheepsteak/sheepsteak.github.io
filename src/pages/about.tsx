@@ -1,16 +1,11 @@
 import { promises } from "fs";
-import fm from "front-matter";
-import { highlightAuto } from "highlight.js";
-import { marked } from "marked";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import type { FC } from "react";
 import { Content } from "../components/content";
 import { Layout } from "../components/layout";
-
-interface PostMetadata {
-  title: string;
-}
+import { Prose } from "../components/prose";
+import { markdownToHTML } from "../markdown";
 
 interface Props {
   content: string;
@@ -23,17 +18,22 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     "utf8",
   );
 
-  const { attributes, body } = fm<PostMetadata>(fileContent);
-  const content = marked(body, {
-    gfm: true,
-    highlight: (code, lang) => highlightAuto(code, [lang]).value,
-    langPrefix: "hljs ",
-  });
+  const htmlResult = await markdownToHTML(fileContent);
+
+  if (!htmlResult.ok) {
+    throw new Error(`Failed to convert about.md to HTML`, {
+      cause: htmlResult.error,
+    });
+  }
+
+  if (typeof htmlResult.data.title !== "string") {
+    throw new Error(`Missing title in about.md`);
+  }
 
   return {
     props: {
-      content,
-      title: attributes.title,
+      content: htmlResult.html,
+      title: htmlResult.data.title,
     },
   };
 };
@@ -45,7 +45,7 @@ const Post: FC<Props> = ({ content, title }) => (
     </Head>
 
     <Content>
-      <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+      <Prose>{content}</Prose>
     </Content>
   </Layout>
 );

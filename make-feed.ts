@@ -1,6 +1,6 @@
 import { promises } from "fs";
 import * as path from "path";
-import fm from "front-matter";
+import { markdownToHTML } from "./src/markdown";
 
 interface Post {
   published: string;
@@ -24,13 +24,37 @@ interface PostMetadata {
     })),
   );
 
-  const postsWithMetadata = postListingsWithContent
-    .reduce<[string, PostMetadata][]>((prev, { fileContent, filename }) => {
-      const { attributes } = fm<PostMetadata>(fileContent);
+  const postsWithMetadata: [string, PostMetadata][] = [];
 
-      return [...prev, [filename.replace(/\.md$/, ""), attributes]];
-    }, [])
-    .sort((a, b) => b[1].published.getTime() - a[1].published.getTime());
+  for (const { fileContent, filename } of postListingsWithContent) {
+    const htmlResult = await markdownToHTML(fileContent);
+
+    if (!htmlResult.ok) {
+      throw new Error(`Failed to convert ${filename} to HTML`, {
+        cause: htmlResult.error,
+      });
+    }
+
+    if (typeof htmlResult.data.published !== "string") {
+      throw new Error(`Missing published date in ${filename}`);
+    }
+
+    if (typeof htmlResult.data.title !== "string") {
+      throw new Error(`Missing title in ${filename}`);
+    }
+
+    postsWithMetadata.push([
+      filename.replace(/\.md$/, ""),
+      {
+        published: new Date(htmlResult.data.published),
+        title: htmlResult.data.title,
+      },
+    ]);
+  }
+
+  postsWithMetadata.sort(
+    (a, b) => b[1].published.getTime() - a[1].published.getTime(),
+  );
 
   const preparedPosts = postsWithMetadata.map<[string, Post]>((p) => [
     p[0],

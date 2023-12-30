@@ -1,7 +1,6 @@
 import type { FC, PropsWithChildren } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
-import styles from "./layout.module.css";
 
 type Props = PropsWithChildren<{
   subtitle?: React.ReactNode;
@@ -9,12 +8,12 @@ type Props = PropsWithChildren<{
 }>;
 
 export const Layout: FC<Props> = ({ children, subtitle, title }) => (
-  <div className={styles.root}>
-    <div className={styles.header}>
+  <div className="flex h-full flex-col">
+    <div>
       <Header subtitle={subtitle} title={title} />
     </div>
-    <main className={styles.content}>{children}</main>
-    <div className={styles.footer}>
+    <main className="grow">{children}</main>
+    <div>
       <Footer></Footer>
     </div>
   </div>

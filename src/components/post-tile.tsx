@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { FC } from "react";
-import styles from "./post-tile.module.css";
 
 interface Props {
   published: string;
@@ -9,14 +8,16 @@ interface Props {
 }
 
 const PostTile: FC<Props> = ({ published, slug, title }) => (
-  <div className={styles.postTile}>
+  <div>
     <Link
       as={`/posts/${slug}`}
       href="/posts/[slug]"
-      className={styles.titleLink}>
-      <h2 className={styles.title}>{title}</h2>
+      className="hover:underline">
+      <h3 className="text-balance text-2xl font-medium md:text-3xl xl:text-4xl">
+        {title}
+      </h3>
     </Link>
-    <time className={styles.date} dateTime={published}>
+    <time className="text-sm font-bold uppercase" dateTime={published}>
       {new Date(published).toLocaleDateString("en-gb", {
         day: "numeric",
         month: "short",
