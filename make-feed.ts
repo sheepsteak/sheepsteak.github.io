@@ -1,4 +1,4 @@
-import { promises } from "fs";
+import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
 import * as path from "path";
 import { markdownToHTML } from "./src/markdown";
 
@@ -13,14 +13,11 @@ interface PostMetadata {
 }
 
 (async () => {
-  const postListings = await promises.readdir("./content/posts");
+  const postListings = await readdir("./content/posts");
   const postListingsWithContent = await Promise.all(
     postListings.map(async (curr) => ({
       filename: curr,
-      fileContent: await promises.readFile(
-        path.join("./content/posts", curr),
-        "utf8",
-      ),
+      fileContent: await readFile(path.join("./content/posts", curr), "utf8"),
     })),
   );
 
@@ -95,6 +92,6 @@ interface PostMetadata {
     </channel>
   </rss>`;
 
-  await promises.mkdir("./out/feed");
-  await promises.writeFile("./out/feed/index.xml", xml);
+  await mkdir("./out/feed");
+  await writeFile("./out/feed/index.xml", xml);
 })();

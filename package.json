@@ -9,8 +9,9 @@
     "url": "https://github.com/sheepsteak/sheepsteak.github.io.git"
   },
   "scripts": {
-    "build": "next build && yarn build:feed",
+    "build": "next build && yarn build:feed && yarn build:sitemap",
     "build:feed": "tsx ./make-feed.ts",
+    "build:sitemap": "tsx ./make-sitemap.ts",
     "dev": "next dev",
     "lint": "eslint .",
     "prepare": "npx yarn-deduplicate && husky install"
