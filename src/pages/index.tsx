@@ -97,10 +97,10 @@ const Post: FC<Props> = ({ posts }) => (
       <title>Chris Shepherd - Home</title>
     </Head>
     <Content>
-      <h2 className="text-balance text-4xl font-bold md:text-5xl xl:text-6xl">
+      <h2 className="text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
         Recent posts
       </h2>
-      <ul className="mt-8 space-y-8 md:mt-16">
+      <ul className="mt-8 space-y-8">
         {posts.map(([slug, metadata]) => (
           <li key={slug}>
             <PostTile

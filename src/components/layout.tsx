@@ -9,12 +9,8 @@ type Props = PropsWithChildren<{
 
 export const Layout: FC<Props> = ({ children, subtitle, title }) => (
   <div className="flex h-full flex-col">
-    <div>
-      <Header subtitle={subtitle} title={title} />
-    </div>
+    <Header subtitle={subtitle} title={title} />
     <main className="grow">{children}</main>
-    <div>
-      <Footer></Footer>
-    </div>
+    <Footer />
   </div>
 );

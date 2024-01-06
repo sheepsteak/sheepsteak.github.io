@@ -13,11 +13,13 @@ const PostTile: FC<Props> = ({ published, slug, title }) => (
       as={`/posts/${slug}`}
       href="/posts/[slug]"
       className="hover:underline">
-      <h3 className="text-balance text-2xl font-medium md:text-3xl xl:text-4xl">
+      <h3 className="text-balance text-xl font-medium sm:text-2xl lg:text-3xl">
         {title}
       </h3>
     </Link>
-    <time className="text-sm font-bold uppercase" dateTime={published}>
+    <time
+      className="text-xs uppercase text-gray-500 sm:text-sm lg:text-base"
+      dateTime={published}>
       {new Date(published).toLocaleDateString("en-gb", {
         day: "numeric",
         month: "short",
