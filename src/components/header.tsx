@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { FC } from "react";
 import { Content } from "./content";
+import { NavLink } from "./nav-link";
 
 interface Props {
   subtitle?: React.ReactNode;
@@ -14,21 +15,19 @@ export const Header: FC<Props> = ({ subtitle, title }) => (
         CHRIS SHEPHERD
       </Link>
       <nav className="mt-4" role="navigation">
-        <ul className="flex gap-2 sm:gap-4 lg:gap-6">
+        <ul className="flex gap-4 sm:gap-6 lg:gap-8">
           <li>
-            <Link className="text-xl hover:underline" href="/">
+            <NavLink exact href="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="text-xl hover:underline" href="/posts">
-              Posts
-            </Link>
+            <NavLink href="/posts">Posts</NavLink>
           </li>
           <li>
-            <Link className="text-xl hover:underline" href="/about">
+            <NavLink exact href="/about">
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
