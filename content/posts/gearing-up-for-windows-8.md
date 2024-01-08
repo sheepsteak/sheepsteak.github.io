@@ -1,4 +1,5 @@
 ---
+intro: The grand revealing of Windows 8 is getting closer and closer.
 layout: post
 published: 2011-08-20T18:26:00.000Z
 title: Gearing Up for Windows 8

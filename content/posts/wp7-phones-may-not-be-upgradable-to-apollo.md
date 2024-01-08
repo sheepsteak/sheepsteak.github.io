@@ -1,4 +1,5 @@
 ---
+intro: Big uproar at the moment about whether existing WP7 phones will get an upgrade to WP8 (Apollo).
 layout: post
 published: 2012-04-18T20:07:00.000Z
 title: WP7 Phones May Not Be Upgradable to Apollo

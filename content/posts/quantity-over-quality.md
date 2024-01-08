@@ -1,4 +1,5 @@
 ---
+intro: A look at some new Windows Phone 7 apps.
 layout: post
 published: 2012-01-23T09:26:00.000Z
 title: Quantity Over Quality

@@ -1,4 +1,5 @@
 ---
+intro: More news on what to expect for Windows 8 on ARM.
 layout: post
 published: 2012-02-12T10:42:00.000Z
 title: Microsoft Talks More About Windows 8 on ARM

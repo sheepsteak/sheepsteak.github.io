@@ -1,4 +1,5 @@
 ---
+intro: Samsung has admitted to hiring a marketing agency to post fake user reviews on the web.
 layout: post
 published: 2013-04-17T21:37:46.505Z
 title: Stay Classy Samsung

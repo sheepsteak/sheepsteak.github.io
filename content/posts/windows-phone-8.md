@@ -1,4 +1,5 @@
 ---
+intro: So Windows Phone 8 is announced and as rumoured current generation phones are left partially stranded.
 layout: post
 published: 2012-06-21T07:58:00.000Z
 title: Windows Phone 8

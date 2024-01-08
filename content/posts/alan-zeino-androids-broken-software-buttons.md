@@ -1,7 +1,8 @@
 ---
+intro: An iOS Developer reviews Android 4.0.
 layout: post
 published: 2012-01-17T10:07:00.000Z
-title: "Alan Zeino: Android's Broken Software Buttons"
+title: "Alan Zeino: Android’s Broken Software Buttons"
 ---
 
 [An iOS Developer reviews Android 4.0](http://alanzeino.tumblr.com/post/15917457226/androids-broken-software-buttons)

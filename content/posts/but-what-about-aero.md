@@ -1,4 +1,5 @@
 ---
+intro: Whilst Metro is the new application model for Windows, Microsoft says that dropping into normal Desktop Mode will still be something that users will still want to do.
 layout: post
 published: 2011-12-08T21:13:00.000Z
 title: But What About Aero?
