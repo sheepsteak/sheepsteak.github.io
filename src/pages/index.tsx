@@ -9,6 +9,7 @@ import { PostTile } from "../components/post-tile";
 import { markdownToHTML } from "../markdown";
 
 interface Post {
+  intro: string | null;
   published: string;
   title: string;
 }
@@ -18,6 +19,7 @@ interface Props {
 }
 
 interface PostMetadata {
+  intro: string | null;
   published: Date;
   title: string;
 }
@@ -45,6 +47,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       });
     }
 
+    if (
+      htmlResult.data.intro != null &&
+      typeof htmlResult.data.intro !== "string"
+    ) {
+      throw new Error(`Missing intro in ${filename}`);
+    }
+
     if (typeof htmlResult.data.published !== "string") {
       throw new Error(`Missing published date in ${filename}`);
     }
@@ -56,6 +65,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     postsWithMetadata.push([
       filename.replace(/\.md$/, ""),
       {
+        intro: htmlResult.data.intro ?? null,
         published: new Date(htmlResult.data.published),
         title: htmlResult.data.title,
       },
@@ -72,6 +82,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       p[0],
       {
         ...p[1],
+        intro: p[1].intro ?? null,
         published: p[1].published.toISOString(),
       },
     ]);
@@ -104,6 +115,7 @@ const Post: FC<Props> = ({ posts }) => (
         {posts.map(([slug, metadata]) => (
           <li key={slug}>
             <PostTile
+              intro={metadata.intro}
               published={metadata.published}
               slug={slug}
               title={metadata.title}
